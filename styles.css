@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #000000; /* Set the background color to black */
+    background-color: #000000; /* Set the background color of home.html to black */
     flex-direction: column; /* Stack content vertically on smaller screens */
 }
 
