@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #000000; /* Set the background color to black */
     flex-direction: column; /* Stack content vertically on smaller screens */
 }
 
@@ -13,13 +13,9 @@ body {
     margin: 20px; /* Add some margin around the content */
 }
 
-/* Media query for screens with a maximum width of 600px (typical mobile devices) */
-@media screen and (max-width: 600px) {
-    body {
-        /* Adjust the styles for smaller screens */
-    }
-
-    .center-container {
-        margin: 10px; /* Adjust margin for smaller screens */
-    }
+.top-text {
+    font-family: "Arial Black", sans-serif;
+    font-size: 24px;
+    margin-top: 0; /* Remove default margin from the h1 element */
+    color: #ffffff; /* Set text color to white */
 }
