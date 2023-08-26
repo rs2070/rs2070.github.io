@@ -14,8 +14,11 @@ body {
 }
 
 .top-text {
-    font-family: "Arial Black", sans-serif;
+    font-family: "Arial Narrow", sans-serif;
     font-size: 24px;
-    margin-top: 0; /* Remove default margin from the h1 element */
+    margin-top: 0; /* Remove default margin from the div element */
     color: #ffffff; /* Set text color to white */
+    display: flex;
+    justify-content: space-between; /* Spread the spans evenly */
+    width: 100%; /* Ensure the spans span the full width */
 }
