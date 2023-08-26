@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff; /* Set the background color of index.html to white */
+    flex-direction: column; /* Stack content vertically on smaller screens */
+}
+
+.center-container {
+    text-align: center;
+    margin: 20px; /* Add some margin around the content */
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+button img {
+    max-width: 100%;
+}
