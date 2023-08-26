@@ -1,7 +1,7 @@
 body {
     margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align buttons at the top left corner */
     align-items: center;
     min-height: 100vh;
     background-color: #000000;
@@ -19,10 +19,8 @@ body {
     margin-top: 0;
     color: #ffffff;
     display: flex;
-    justify-content: space-between; /* Spread the spans evenly */
+    justify-content: center; /* Center the links horizontally */
     width: 100%;
-
-    /* Additional spacing for smaller screens */
     flex-wrap: wrap;
     gap: 10px;
 }
