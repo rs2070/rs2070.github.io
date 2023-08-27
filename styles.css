@@ -1,7 +1,7 @@
 body {
     margin: 0;
     display: flex;
-    justify-content: flex-start; /* Align buttons at the top left corner */
+    justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
     background-color: #000000;
@@ -19,7 +19,7 @@ body {
     margin-top: 0;
     color: #ffffff;
     display: flex;
-    justify-content: center; /* Center the links horizontally */
+    justify-content: center;
     width: 100%;
     flex-wrap: wrap;
     gap: 10px;
@@ -33,6 +33,8 @@ body {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    border: none; /* Remove button border */
+    outline: none; /* Remove button outline */
 }
 
 .menu-button:hover {
