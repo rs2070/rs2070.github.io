@@ -42,6 +42,8 @@ body {
 }
 
 .home-button {
+    width: 100px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
     position: absolute; /* Position the button absolutely */
     bottom: 10px; /* Adjust the distance from the bottom */
     left: 50%; /* Center horizontally */
