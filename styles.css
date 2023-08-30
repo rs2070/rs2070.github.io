@@ -1,43 +1,58 @@
 body {
     margin: 0;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     background-color: #000000;
     flex-direction: column;
     position: relative;
 }
 
-.background-gif {
+.background-wrapper {
     position: absolute;
-    top: 0;
+    top: 100px;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-image: url('background.gif');
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: scale(0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.background-gif {
+    width: 40%;
+    padding-bottom: 40%; /* Maintain aspect ratio for a square */
+    background-image: url('background.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 30%; /* Adjust the desired top position */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+
 
 .center-container {
     text-align: center;
+    width: 100%;
+    padding: 20px;
 }
 
 .top-text {
     font-family: "Arial Narrow", sans-serif;
     font-size: 24px;
-    margin-top: -250px; /* Adjust this value to move the buttons up */
+    margin-top: -250px;
     color: #ffffff;
     display: flex;
     justify-content: center;
-    width: 100%;
     flex-wrap: wrap;
     gap: 10px;
+    margin-bottom: 20px;
 }
-
 
 .menu-button {
     padding: 10px 20px;
@@ -49,6 +64,7 @@ body {
     transition: color 0.5s ease;
     border: none;
     outline: none;
+    flex: 1;
 }
 
 .menu-button:hover {
@@ -56,15 +72,26 @@ body {
 }
 
 .home-button {
-    width: 100px;
+    width: 10%;
     height: auto;
     position: absolute;
-    bottom: 10px;
-    left: 50%;
+    bottom: -300px; /* Adjust the desired bottom position */
+    left: 50%; /* Align with the current position of .background-gif */
     transform: translateX(-50%);
     display: block;
+    z-index: 2;
 }
 
 .home-button:hover .home-image {
     content: url('crowned skull red.png');
 }
+
+@media (max-width: 600px) {
+    .home-button {
+        width: 15%;
+    }
+}
+
+
+
+
