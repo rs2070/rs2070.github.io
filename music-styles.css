@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000000;
+    flex-direction: column;
+}
+
+.center-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.top-text {
+    font-family: "Arial Narrow", sans-serif;
+    font-size: 24px;
+    margin-top: 0;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.menu-button {
+    padding: 10px 20px;
+    background-color: #000; /* Set background to black */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: color 0.5s ease; /* Add color transition */
+    border: none;
+    outline: none;
+}
+
+.menu-button:hover {
+    color: #ff0000; /* Change text color on hover to red */
+}
+
+.home-button {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    transition: filter 0.5s ease; /* Add transition for the filter property */
+}
+
+.home-button img {
+    width: 100%;
+    height: auto;
+}
+
+.home-button:hover .home-image {
+    content: url('crowned skull red.png');
+}

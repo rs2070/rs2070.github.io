@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000000;
+    flex-direction: column;
+    overflow-y: scroll; /* Always show scrollbar to reserve space */
+}
+
+.center-container {
+    margin-bottom: 200px; /* Add margin to create a big space at the bottom */
+    position: relative; /* Set to relative positioning */
+    box-sizing: border-box; /* Include padding within width calculation */
+}
+
+.top-text {
+    font-family: "Arial Narrow", sans-serif;
+    font-size: 24px;
+    margin-top: 0;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.menu-button {
+    padding: 10px 20px;
+    background-color: #000; /* Set background to black */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: color 0.5s ease; /* Add color transition */
+    border: none;
+    outline: none;
+}
+
+.menu-button:hover {
+    color: #ff0000; /* Change text color on hover to red */
+}
+
+.square-title {
+    background-color: black;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    font-family: "Arial Narrow", sans-serif;
+    font-size: 14px;
+    transition: color 0.5s ease, background-color 0.5s ease;
+    display: inline-block; /* Display as inline-block to center */
+    text-align: center; /* Center the text horizontally */
+    width: 100%; /* Occupy the full width of the square */
+    box-sizing: border-box; /* Include padding within width */
+}
+
+.square-title:hover {
+    color: #ccc;
+    background-color: #201e1e;
+}
+
+.square-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    height: calc(100vh - 20px - 30px - 100px);
+}
+
+.square {
+    width: 100%; /* Set width to 100% to take full width */
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in width */
+    border-bottom: 1px solid #333; /* Add a divider line between squares */
+}
+
+.square img {
+    max-width: 40px; /* Adjust the width of the bullet image */
+    max-height: 40px; /* Adjust the height of the bullet image */
+    margin-right: 10px; /* Add margin for spacing between image and title */
+}
+
+.home-button {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    z-index: 2;
+    bottom: -250px; /* Adjust the value as needed */
+}
+
+.home-button:hover .home-image {
+    content: url('crowned skull red.png');
+}
+
+.extra-titles {
+    display: none; /* Hide the extra titles by default */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.square.active .extra-titles {
+    display: flex; /* Show the extra titles when the button is clicked */
+}
+
+.popup {
+    display: none;
+    position: fixed; /* Use 'fixed' positioning to center the popup */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    width: 300px; /* Adjust the width of the popup as needed */
+    text-align: center; /* Center the content inside the popup */
+}
+
+.square.active .popup {
+    display: block;
+}
+
+.extra-title {
+    background-color: #131313;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Arial Narrow", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.extra-title:hover {
+    background-color: #ff0000;
+    color: #eee;
+}
