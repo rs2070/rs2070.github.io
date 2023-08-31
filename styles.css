@@ -20,8 +20,24 @@ body {
     background-image: url('background.gif');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 35%; /* Set the background size to 25% */
+    background-size: 70%; /* Default value for smaller devices */
 }
+
+@media screen and (min-width: 768px) {
+    /* For devices with a width of 768px or more (like iPhone 12 Pro) */
+    .background-gif {
+        background-size: 35%; /* Adjust this value proportionally */
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    /* For devices with a width of 1280px or more (towards 1920x1080 resolution) */
+    .background-gif {
+        background-size: 25%; /* Adjust this value proportionally */
+    }
+}
+
+
 
 
 .center-container {
