@@ -1,97 +1,86 @@
 body {
+    background-color: black; /* Set the background color of the entire webpage to black */
+    padding-top: 60px; /* Adjusted value to account for the menu bar space */
+}
+
+
+* {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #000000;
-    flex-direction: column;
-    position: relative;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.background-wrapper {
-    position: absolute;
-    top: 100px;
-    left: 0;
+/* Apply a background color to the menu bar */
+.menu-container {
+    display: flex;
+    background-color: black; /* Change the background color to black */
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 100%;
-    z-index: -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    z-index: 1000;
 }
 
-.background-gif {
-    width: 40%;
-    padding-bottom: 40%; /* Maintain aspect ratio for a square */
-    background-image: url('background.gif');
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 30%; /* Adjust the desired top position */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-}
-
-
-
-.center-container {
-    text-align: center;
-    width: 100%;
-    padding: 20px;
-}
-
-.top-text {
-    font-family: "Arial Narrow", sans-serif;
-    font-size: 24px;
-    margin-top: -250px;
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
+/* Style the menu buttons */
 .menu-button {
+    font-size: 16px; /* Set the initial font size */
+    font-size: clamp(14px, 3vw, 20px); /* Use the clamp function to make the font size adjustable */
+    color: white;
+    font-family: "Arial Narrow", sans-serif;
     padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    flex-grow: 1;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: color 0.5s ease;
-    border: none;
-    outline: none;
-    flex: 1;
+    transition: color 0.3s;
 }
+
 
 .menu-button:hover {
-    color: #ff0000;
+    color: red; /* Change the text color to red on hover */
 }
 
-.home-button {
-    width: 10%;
-    height: auto;
-    position: absolute;
-    bottom: -300px; /* Adjust the desired bottom position */
-    left: 50%; /* Align with the current position of .background-gif */
+.gif-container {
+    position: fixed;
+    top: 60px; /* Space for the menu bar */
+    left: 50%;
     transform: translateX(-50%);
+    width: auto;
+    max-width: calc(100% - 40px); /* Maximum width of the GIF */
+    height: auto;
+    max-height: calc(100vh - 170px); /* Maximum height of the GIF */
+    z-index: -1; /* Place the GIF behind other content */
+    overflow: hidden; /* Hide any overflow of the GIF */
+    background-color: black; /* Set the background color of the GIF container to black */
+}
+
+.gif-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Keep the aspect ratio and fit within the container */
+}
+
+
+/* Style the home button */
+.home-button {
     display: block;
-    z-index: 2;
+    width: 50px;
+    height: 50px;
+    background-color: black; /* Set the background color of the home button to black */
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    left: 50%; /* Center the home button horizontally */
+    transform: translateX(-50%); /* Centering transform */
+    z-index: 1000;
+    text-decoration: none;
 }
 
 .home-button:hover .home-image {
     content: url('crowned skull red.png');
 }
 
-@media (max-width: 600px) {
-    .home-button {
-        width: 15%;
-    }
+.home-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-
-
-
-
