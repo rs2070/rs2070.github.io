@@ -77,7 +77,7 @@ squareButtons.forEach((button, index) =>
                 case 0:
                     //fullLinkButton.textContent = '1'; // Change the text for the first button
                     // Handle first button's action
-                    window.location.href = 'https://the-empire.sellfy.store/p/afterthought/';
+                    window.location.href = 'https://soundcloud.com/user-985236963/afterthought-prod-rulah';
                     break;
                 case 1:
                     //fullLinkButton.textContent = '2'; // Change the text for the second button
@@ -114,7 +114,7 @@ squareButtons.forEach((button, index) =>
                     break;   
                 case 9:
                     //fullLinkButton.textContent = '10'; 
-                    window.location.href = 'https://the-empire.sellfy.store/p/mmxxii/';
+                    window.location.href = 'https://soundcloud.com/user-985236963/mmxxii-prod-rulah';
                     break;                              
                 default:
                     break;
